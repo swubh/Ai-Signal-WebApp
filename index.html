@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ai Signal</title>
+  <style>
+    body {
+      background-color: black;
+      color: white;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      margin-top: 20%;
+    }
+    input {
+      padding: 10px;
+      font-size: 16px;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      margin-top: 10px;
+      background-color: blue;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="container" id="login-container">
+    <h2>Enter Password to Access</h2>
+    <input type="password" id="password" placeholder="Enter password"/>
+    <br/>
+    <button onclick="checkPassword()">Submit</button>
+  </div>
+
+  <div class="container" id="dashboard" style="display:none;">
+    <h1>Ai Signal Dashboard</h1>
+    <p>New Signal</p>
+    <p>Pair: EUR/USD</p>
+    <p>ACTION: CALL (BUY)</p>
+    <p>Time: 19:44 IST</p>
+    <p>Timeframe: 1 minute</p>
+    <p>Reason: RSI + MA + Bollinger + SureShot</p>
+  </div>
+
+  <script>
+    function checkPassword() {
+      const input = document.getElementById('password').value;
+      if (input === '@SHUBHMOD') {
+        document.getElementById('login-container').style.display = 'none';
+        document.getElementById('dashboard').style.display = 'block';
+      } else {
+        alert('Incorrect Password!');
+      }
+    }
+  </script>
+</body>
+</html>
+    
